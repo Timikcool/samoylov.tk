@@ -1,0 +1,33 @@
+.trophey-card {
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  color: black;
+  background: white;
+  box-sizing: border-box;
+  padding: 10px;
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 425px;
+  max-height: 200px;
+
+  &:hover {
+    background: black;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+
+.ReactModal__Content {
+  button {
+    background: none;
+    border-radius: 8px;
+    color: black;
+    border: none;
+    padding: 4px 9px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+}

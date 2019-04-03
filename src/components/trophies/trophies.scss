@@ -1,0 +1,8 @@
+.trophies {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 760px) {
+    flex-direction: row;
+  }
+}
