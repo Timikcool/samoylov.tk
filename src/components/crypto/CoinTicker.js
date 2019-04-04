@@ -15,7 +15,7 @@ export default ({ coin }) => {
       <defs />
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         id="Classic"
         stroke="none"
         strokeWidth="1"
@@ -78,7 +78,7 @@ export default ({ coin }) => {
   );
   const BTC = () => (
     <svg
-      enable-background="new 0 0 226.777 226.777"
+      enableBackground="new 0 0 226.777 226.777"
       height="226.777px"
       id="Layer_1"
       version="1.1"

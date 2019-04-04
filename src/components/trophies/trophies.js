@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Card from "./card";
 import "./trophies.scss";
 
@@ -17,16 +17,22 @@ const Trophies = () => {
       link: "https://imaguru.by/event/imaguru-blockchain-hackathon-4/"
     },
     {
-      title:'Belarus ICT Start-up Award',
-      description:'Finalist',
-      date:'20.04.2017',
-      link:'https://tech.onliner.by/2017/04/20/poxudet'
+      title: "Belarus ICT Start-up Award",
+      description: "Finalist",
+      date: "20.04.2017",
+      link: "https://tech.onliner.by/2017/04/20/poxudet"
     }
   ];
   return (
     <div className="trophies">
-      {cards.map(({ title, description, date }) => (
-        <Card title={title} description={description} date={date} />
+      {cards.map(({ title, description, date, link }) => (
+        <Card
+          title={title}
+          description={description}
+          link={link}
+          date={date}
+          key={title}
+        />
       ))}
     </div>
   );
