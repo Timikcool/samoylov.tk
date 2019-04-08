@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-animated-slider";
+import Lightbox from 'react-image-lightbox';
 import "react-animated-slider/build/horizontal.css";
 import Modal from "react-modal";
 import "./card.scss";
@@ -11,38 +12,21 @@ const customStyles = {
     bottom: "auto",
     margin: "0 auto",
     width: "80vw",
-    height: "75vh",
+    height: "fit-content",
     transform: "translate(-50%, -50%)"
   }
 };
-const cards = [
-  {
-    title: "Imaguru FinTech Hackathon: Elevator Lab Edition",
-    description: "Winner",
-    date: "24.03.2019",
-    link: "https://imaguru.by/event/fintech-hackathon/"
-  },
-  {
-    title: "Imaguru International Blockchainthon",
-    description: "2nd place",
-    date: "07.10.2018",
-    link: "https://imaguru.by/event/imaguru-blockchain-hackathon-4/"
-  },
-  {
-    title: "Belarus ICT Start-up Award",
-    description: "Finalist",
-    date: "20.04.2017",
-    link: "https://tech.onliner.by/2017/04/20/poxudet"
-  }
-];
-const Card = ({ title, description, status, date, link, photos }) => {
+
+const Card = ({ title, status, description, date, link, images, photos }) => {
   const [modalIsOpen, changeModal] = useState(false);
+  const [lightboxIsOpen, changeLightbox] = useState(false);
+  const [photoIndex, changePhotoIndex] = useState(0);
   Modal.setAppElement("#root");
   return (
     <React.Fragment>
       <div onClick={() => changeModal(true)} className="trophey-card">
         <h4 className="trophey-title">{title}</h4>
-        <p className="trophey-description">{status}</p>
+        <p className="trophey-status">{status}</p>
         <p>{date}</p>
       </div>
       <Modal
@@ -53,28 +37,28 @@ const Card = ({ title, description, status, date, link, photos }) => {
         <h2>{title}</h2>
         <h4>{status}</h4>
         <p>{description}</p>
-        <Slider>
-          {cards.map((item, index) => (
-            <div key={index}>
-              <h2>{item.title}</h2>
-              <div>{item.description}</div>
-            </div>
-          ))}
-        </Slider>
+        {lightboxIsOpen && (
+          <Lightbox
+            mainSrc={images[photoIndex]}
+            nextSrc={images[(photoIndex + 1) % images.length]}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            onCloseRequest={() => changeLightbox(false)}
+            onMovePrevRequest={() => changePhotoIndex((photoIndex + images.length - 1) % images.length)}
+            onMoveNextRequest={() => changePhotoIndex((photoIndex + 1) % images.length)}
+          />
+        )}
         <div className="links">
           {link && (
             <a rel="noopener noreferrer" target="_blank" href={link}>
               <i class="icon ion-md-globe" />
             </a>
           )}
-          {photos && (
-            <a rel="noopener noreferrer" target="_blank" href={link}>
+            <button onClick={() => changeLightbox(true)} className="gallery-btn">
               <i class="icon ion-md-images" />
-            </a>
-          )}
+            </button>
         </div>
 
-        <button onClick={() => changeModal(false)}>X</button>
+        <button className="cancel-btn" onClick={() => changeModal(false)}>X</button>
       </Modal>
     </React.Fragment>
   );

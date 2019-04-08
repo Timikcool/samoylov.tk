@@ -20,7 +20,7 @@
 }
 
 .ReactModal__Content {
-  button {
+  button.cancel-btn {
     background: none;
     border-radius: 8px;
     color: black;
@@ -29,6 +29,19 @@
     position: absolute;
     top: 2%;
     right: 2%;
+
+  }
+
+  button.gallery-btn {
+    border: none;
+    font-size: 1.5em;
+    color: black;
+    margin: 5px;
+    background: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .links {

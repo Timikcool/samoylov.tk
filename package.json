@@ -12,6 +12,7 @@
     "react": "^16.8.5",
     "react-animated-slider": "^1.1.4",
     "react-dom": "^16.8.5",
+    "react-image-lightbox": "^5.1.0",
     "react-modal": "^3.8.1",
     "react-particles-js": "^2.5.1",
     "react-router-dom": "^5.0.0",
