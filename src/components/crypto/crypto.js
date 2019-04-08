@@ -7,7 +7,7 @@ import CoinTicker from './CoinTicker';
 import './crypto.scss';
 const Crypto = ({ rawCrypto, displayCrypto }) => {
   console.log(rawCrypto, displayCrypto);
-  const pizzaDay = moment('2010-01-02');
+  const pizzaDay = moment('2010-05-22');
   const days = moment().diff(pizzaDay, 'days');
   const pizzaPrice = rawCrypto ? 10000 * rawCrypto.BTC.USD.PRICE : null;
   const pizzaCount = rawCrypto ? pizzaPrice / 30 : null;

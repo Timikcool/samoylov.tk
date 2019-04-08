@@ -39,7 +39,34 @@
       border-radius: 8px;
       width: 45%;
       max-width: 270px;
+
       // margin: 0 auto;
+
+
+      &:hover {
+        cursor: none;
+        animation: contrast 1s ease 100ms infinite normal;
+      }
+
+      @keyframes contrast {
+        from {
+          filter: contrast(1);
+        }
+
+        50% {
+          filter: contrast(5);
+        }
+
+        to {
+          filter: contrast(1);
+        }
+      }
+    }
+  }
+
+  section {
+    a {
+      color: white;
     }
   }
 }

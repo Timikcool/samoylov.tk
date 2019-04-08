@@ -1,37 +1,47 @@
 @import '../text-slider.scss';
+
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
 }
+
 ::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #000000;
   border: 0px none #ffffff;
   border-radius: 50px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
 }
+
 ::-webkit-scrollbar-thumb:active {
   background: #000000;
 }
+
 ::-webkit-scrollbar-track {
   background: #ffffff;
   border: 0px none #ffffff;
   border-radius: 50px;
 }
+
 ::-webkit-scrollbar-track:hover {
   background: #ffffff;
 }
+
 ::-webkit-scrollbar-track:active {
   background: #ffffff;
 }
+
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
 .home {
   --f-size: 1;
   --f-unit: 0.7vmin;
@@ -41,39 +51,49 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  cursor: crosshair;
+
   h1 {
     text-align: center;
   }
+
   .mr-robot {
     text-decoration: none;
     color: red;
     font-family: 'MR-ROBOT';
     font-size: 1em;
+
     &:hover {
       color: transparent;
     }
   }
+
   .main-text {
     width: 95%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-evenly;
+
     a {
       color: black;
     }
   }
+
   .clay-container {
     display: flex;
     justify-content: space-around;
   }
+
   .blockchain {
     font-weight: bold;
   }
+
   .color-blink {
     background: black;
     color: white;
   }
+
   #qube {
     position: absolute;
     z-index: -1;
