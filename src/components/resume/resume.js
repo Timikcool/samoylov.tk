@@ -1,5 +1,7 @@
 import React from "react";
 import moment from "moment";
+import ExperienceItem from './experienceItem';
+import experienceHistory from './experienceHistory.json';
 import "./resume.scss";
 const Resume = () => {
   const birthDay = moment("1998-12-09");
@@ -76,13 +78,13 @@ const Resume = () => {
           </li>
         </ul>
       </section>
-      <section className="experience">
-      <h3>Experience:</h3>
-      <p>School of Business of Belarussian State University, Information Resources Management</p>
-      </section>
       <section className="education">
       <h3>Education:</h3>
       <p>School of Business of Belarussian State University, Information Resources Management</p>
+      </section>
+      <section className="experience">
+      <h3>Experience:</h3>
+      {experienceHistory.map((params) => <ExperienceItem {...params}  />)}
       </section>
     </div>
   );
