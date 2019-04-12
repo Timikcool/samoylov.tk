@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
-import ExperienceItem from './experienceItem';
-import experienceHistory from './experienceHistory.json';
+import ExperienceItem from "./experienceItem";
+import experienceHistory from "./experienceHistory.json";
 import "./resume.scss";
 const Resume = () => {
   const birthDay = moment("1998-12-09");
@@ -57,7 +57,7 @@ const Resume = () => {
             </a>
           </li>
           <li>
-          GitHub:{" "}
+            GitHub:{" "}
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -79,12 +79,27 @@ const Resume = () => {
         </ul>
       </section>
       <section className="education">
-      <h3>Education:</h3>
-      <p>School of Business of Belarussian State University, Information Resources Management</p>
+        <h3>Education:</h3>
+        <p>
+          School of Business of Belarussian State University, Information
+          Resources Management
+        </p>
+      </section>
+      <section className="tech">
+        <h3>Well known tech:</h3>
+        <ul>
+          <li>Frontend: React, Inferno, Angular, Webpack, Redux, Sass</li>
+          <li>Backend: Node, Koa, Express</li>
+          <li>Tools: Docker, Git, AWS, Firebase, Heroku</li>
+          <li>Database: MongoDB</li>
+          <li>Blockchain: EOSJS, Truffle, Web3, Solidity</li>
+        </ul>
       </section>
       <section className="experience">
-      <h3>Experience:</h3>
-      {experienceHistory.map((params) => <ExperienceItem {...params}  />)}
+        <h3>Experience:</h3>
+        {experienceHistory.map(params => (
+          <ExperienceItem {...params} />
+        ))}
       </section>
     </div>
   );

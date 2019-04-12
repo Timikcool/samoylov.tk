@@ -1,0 +1,15 @@
+.status {
+  font-size: 11px;
+
+  &.offline {
+    color: red;
+  }
+
+  &.online {
+    color: lightgreen;
+  }
+
+  &.private {
+    color: yellow;
+  }
+}

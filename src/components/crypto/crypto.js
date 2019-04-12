@@ -1,15 +1,15 @@
-import React from 'react';
-import Particles from 'react-particles-js';
-import particlesConfig from './particles.config.json';
-import { connect } from 'redux-bundler-react';
-import moment from 'moment';
-import CoinTicker from './CoinTicker';
-import './crypto.scss';
+import React from "react";
+import Particles from "react-particles-js";
+import particlesConfig from "./particles.config.json";
+import { connect } from "redux-bundler-react";
+import moment from "moment";
+import CoinTicker from "./CoinTicker";
+import "./crypto.scss";
 const Crypto = ({ rawCrypto, displayCrypto }) => {
   console.log(rawCrypto, displayCrypto);
-  const pizzaDay = moment('2010-05-22');
-  const days = moment().diff(pizzaDay, 'days');
-  const pizzaPrice = rawCrypto ? 10000 * rawCrypto.BTC.USD.PRICE : null;
+  const pizzaDay = moment("2010-05-22");
+  const days = moment().diff(pizzaDay, "days");
+  const pizzaPrice = rawCrypto ? (10000 * rawCrypto.BTC.USD.PRICE) / 2 : null;
   const pizzaCount = rawCrypto ? pizzaPrice / 30 : null;
   const coins = displayCrypto ? Object.keys(displayCrypto) : null;
   return (
@@ -48,11 +48,11 @@ const Crypto = ({ rawCrypto, displayCrypto }) => {
       {coins && (
         <div className="coins">
           {coins.map(coin => (
-              <div className={`coin ${coin}`} key={coin}>
-                <div className="coin-ticket">{<CoinTicker coin={coin} />}</div>
-                <p className="coin-name">{coin}</p>
-                <p className="coin-price">{displayCrypto[coin].USD.PRICE}</p>
-              </div>
+            <div className={`coin ${coin}`} key={coin}>
+              <div className="coin-ticket">{<CoinTicker coin={coin} />}</div>
+              <p className="coin-name">{coin}</p>
+              <p className="coin-price">{displayCrypto[coin].USD.PRICE}</p>
+            </div>
           ))}
         </div>
       )}
@@ -65,7 +65,7 @@ const Crypto = ({ rawCrypto, displayCrypto }) => {
   );
 };
 export default connect(
-  'selectRawCrypto',
-  'selectDisplayCrypto',
+  "selectRawCrypto",
+  "selectDisplayCrypto",
   Crypto
 );

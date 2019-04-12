@@ -42,16 +42,8 @@ const Trophies = () => {
   ];
   return (
     <div className="trophies">
-      {cards.map(({ title, description, status, date, link, images }) => (
-        <Card
-          title={title}
-          status={status}
-          description={description}
-          link={link}
-          images={images}
-          date={date}
-          key={title}
-        />
+      {cards.map(({ ...props }) => (
+        <Card key={props.title} {...props} />
       ))}
     </div>
   );

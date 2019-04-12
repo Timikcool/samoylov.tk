@@ -53,6 +53,13 @@
   height: 100%;
   cursor: crosshair;
 
+  .color-switch {
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+
   h1 {
     text-align: center;
   }

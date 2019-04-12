@@ -1,5 +1,5 @@
-import { createAsyncResourceBundle, createSelector } from 'redux-bundler';
-import Axios from 'axios';
+import { createAsyncResourceBundle, createSelector } from "redux-bundler";
+import Axios from "axios";
 // export default {
 //   name: 'crypto',
 //   reducer: (state = [], action) => {
@@ -21,28 +21,34 @@ import Axios from 'axios';
 // };
 
 const bundler = createAsyncResourceBundle({
-  name: 'crypto',
+  name: "crypto",
   staleAfter: 4000,
   getPromise: async () => {
     const response = await Axios.get(
-      'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,EOS&tsyms=USD&api_key=c39141df8238476bdf9062db9ffc3e14494cd217b3f39b35d733071aaf5771cd',
+      "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC,EOS&tsyms=USD&api_key=c39141df8238476bdf9062db9ffc3e14494cd217b3f39b35d733071aaf5771cd",
       {
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         }
       }
     );
     return response.data;
   }
 });
-bundler.selectRawCrypto = createSelector('selectCrypto', (crypto) => crypto ? crypto.RAW : crypto);
-bundler.selectDisplayCrypto = createSelector('selectCrypto', (crypto) => crypto ? crypto.DISPLAY : crypto);
+bundler.selectRawCrypto = createSelector(
+  "selectCrypto",
+  crypto => (crypto ? crypto.RAW : crypto)
+);
+bundler.selectDisplayCrypto = createSelector(
+  "selectCrypto",
+  crypto => (crypto ? crypto.DISPLAY : crypto)
+);
 bundler.reactCryptoFetch = createSelector(
-  'selectCryptoShouldUpdate',
-  'selectPathname',
+  "selectCryptoShouldUpdate",
+  "selectPathname",
   (shouldUpdate, pathname) => {
-    if (shouldUpdate && pathname === '/crypto') {
-      return { actionCreator: 'doFetchCrypto' };
+    if (shouldUpdate && pathname === "/crypto") {
+      return { actionCreator: "doFetchCrypto" };
     }
   }
 );

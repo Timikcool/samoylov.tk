@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-animated-slider";
-import Lightbox from 'react-image-lightbox';
+import Lightbox from "react-image-lightbox";
 import "react-animated-slider/build/horizontal.css";
 import Modal from "react-modal";
 import "./card.scss";
@@ -43,22 +43,28 @@ const Card = ({ title, status, description, date, link, images, photos }) => {
             nextSrc={images[(photoIndex + 1) % images.length]}
             prevSrc={images[(photoIndex + images.length - 1) % images.length]}
             onCloseRequest={() => changeLightbox(false)}
-            onMovePrevRequest={() => changePhotoIndex((photoIndex + images.length - 1) % images.length)}
-            onMoveNextRequest={() => changePhotoIndex((photoIndex + 1) % images.length)}
+            onMovePrevRequest={() =>
+              changePhotoIndex((photoIndex + images.length - 1) % images.length)
+            }
+            onMoveNextRequest={() =>
+              changePhotoIndex((photoIndex + 1) % images.length)
+            }
           />
         )}
         <div className="links">
           {link && (
             <a rel="noopener noreferrer" target="_blank" href={link}>
-              <i class="icon ion-md-globe" />
+              <i className="icon ion-md-globe" />
             </a>
           )}
-            <button onClick={() => changeLightbox(true)} className="gallery-btn">
-              <i class="icon ion-md-images" />
-            </button>
+          <button onClick={() => changeLightbox(true)} className="gallery-btn">
+            <i className="icon ion-md-images" />
+          </button>
         </div>
 
-        <button className="cancel-btn" onClick={() => changeModal(false)}>X</button>
+        <button className="cancel-btn" onClick={() => changeModal(false)}>
+          X
+        </button>
       </Modal>
     </React.Fragment>
   );

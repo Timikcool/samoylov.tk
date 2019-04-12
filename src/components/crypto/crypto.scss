@@ -8,6 +8,7 @@
   --f: calc(var(--f-size) * var(--f-unit));
   --bg: black;
   color: white;
+
   a {
     color: white;
   }
@@ -19,36 +20,43 @@
     justify-content: space-around;
     flex-direction: row;
     width: 90%;
-      svg {
+
+    svg {
+      fill: white;
+      height: 2em;
+      width: 2em;
+
+      & path {
         fill: white;
-        height: 2em;
-        width: 2em;
-        & path {
-          fill: white;
-        }
-        & polygon {
-          fill: white;
-        }
+      }
+
+      & polygon {
+        fill: white;
       }
     }
+  }
 
   h2 {
     font-family: 'Press Start 2P';
   }
+
   .pizza-text {
     width: 95%;
   }
+
   .pizza-price,
   .pizza-count {
     text-align: center;
     width: 100%;
+
     @media screen and (min-width: 768px) {
-      width: 70%;
+      width: 50%;
       display: flex;
       justify-content: space-between;
     }
   }
 }
+
 .particles-container {
   position: absolute;
   z-index: -1;
@@ -57,6 +65,7 @@
   width: 100%;
   height: calc(100vh - 40px - 35px);
 }
+
 .particles {
   height: calc(100vh - 40px - 35px);
 }
