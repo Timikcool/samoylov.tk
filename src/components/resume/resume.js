@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import ExperienceItem from "./experienceItem";
 import experienceHistory from "./experienceHistory.json";
+import print from './toPDF';
 import "./resume.scss";
 const Resume = () => {
   const birthDay = moment("1998-12-09");
@@ -17,13 +18,13 @@ const Resume = () => {
         <div className="name">
           <h2>Timur Samoylov</h2>
           <p>developer you deserve</p>
-          <button>Download PDF</button>
+          <button onClick={() => print()} id="download_resume">Download PDF</button>
         </div>
       </div>
       <section className="general-info">
         <h3>General info:</h3>
         <ul>
-          <li>{`Date of Birth: 09/12/1998 (${years} years old)`}</li>
+          {/* <li>{`Date of Birth: 09/12/1998 (${years} years old)`}</li> */}
           <li>{`Current location: Minsk, Belarus`}</li>
           <li>Phone: +375 (33) 363-23-35</li>
           <li>

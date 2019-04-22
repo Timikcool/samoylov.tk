@@ -13,3 +13,13 @@
     color: yellow;
   }
 }
+.name {
+  a {
+    text-decoration: none;
+    &:hover {
+      background: white;
+      cursor: pointer;
+      color: black;
+    }
+  }
+}
