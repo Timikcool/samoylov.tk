@@ -13,6 +13,7 @@ export const toolsArr = [
   'NPM',
   'Solidity',
   'Git',
+  'SSR',
   'EOSJS',
   'Semantic UI',
   'Wordpress',

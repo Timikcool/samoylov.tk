@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Slider from "react-animated-slider";
 import Lightbox from "react-image-lightbox";
 import "react-animated-slider/build/horizontal.css";
 import Modal from "react-modal";

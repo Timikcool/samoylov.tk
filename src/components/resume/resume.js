@@ -1,10 +1,12 @@
 import React from "react";
+import ReactGA from 'react-ga';
 import moment from "moment";
 import ExperienceItem from "./experienceItem";
 import experienceHistory from "./experienceHistory.json";
 import print from './toPDF';
 import "./resume.scss";
 const Resume = () => {
+  ReactGA.pageview('/resume');
   const birthDay = moment("1998-12-09");
   const years = moment().diff(birthDay, "years");
   return (

@@ -5,6 +5,8 @@ import { connect } from "redux-bundler-react";
 import moment from "moment";
 import CoinTicker from "./CoinTicker";
 import "./crypto.scss";
+import pets from "./pet-projects.json";
+import Pet from './pet';
 const Crypto = ({ rawCrypto, displayCrypto }) => {
   console.log(rawCrypto, displayCrypto);
   const pizzaDay = moment("2010-05-22");
@@ -56,6 +58,14 @@ const Crypto = ({ rawCrypto, displayCrypto }) => {
           ))}
         </div>
       )}
+      <div className="pet-projects">
+            <h4>Few of my pet-projects <span>(not only in crypto)</span> that under deveopment or mantaince</h4>
+            <ul class="pet-list">
+            {pets.map((props) => <li class="pet-item">
+                    <Pet {...props} />
+                </li>)}
+            </ul>
+      </div>
       <Particles
         canvasClassName="particles"
         className="particles-container"

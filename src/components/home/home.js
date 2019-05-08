@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ReactGA from 'react-ga';
 import Typed from "react-typed";
 import { connect } from "redux-bundler-react";
 import { getNavHelper } from "internal-nav-helper";
@@ -6,6 +7,7 @@ import * as THREE from "three";
 import "./home.scss";
 import { toolsArr, activitiesArr } from "../utils";
 const Home = ({ doUpdateUrl }) => {
+  ReactGA.pageview('/home');
   useEffect(() => {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xffffff);
@@ -69,7 +71,7 @@ const Home = ({ doUpdateUrl }) => {
             <Typed strings={toolsArr} typeSpeed={40} backSpeed={50} loop />
           </p>
           <p>
-            Worked as fullstack developer on huge fintech apps, admin panels,
+            Worked as fullstack developer on fintech apps, social networks,
             PWAs, games, Electron apps.
           </p>
         </div>
@@ -100,9 +102,7 @@ const Home = ({ doUpdateUrl }) => {
       </div> */}
         <div>
           <p>
-            {
-              "I love coding and making pet-projects for myself, but besides that I can: launch a startup and fail, play videogames on pro level, pitch idea and speak in front of any amount of people, play guitar, whistle, watch SpaceX rocket launch or Netflix all night long, make squats with my weight..."
-            }
+              I love coding and making <a className="color-switch" href={"/crypto"}>pet-projects</a> for myself, but besides that I can: launch a startup and fail, play videogames on pro level, pitch idea and speak in front of any amount of people, play guitar, whistle, watch SpaceX rocket launch or Netflix all night long, make squats with my weight...
           </p>
         </div>
         <div>

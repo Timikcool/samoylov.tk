@@ -53,6 +53,16 @@
   height: 100%;
   cursor: crosshair;
 
+  // &::selection{
+  //   color:white;
+  //   background: black;
+  // }
+
+  // &::-moz-selection {
+  //   color:white;
+  //   background: black;
+  // }
+
   .color-switch {
     &:hover {
       color: white;

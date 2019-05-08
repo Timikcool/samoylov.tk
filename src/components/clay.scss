@@ -1,7 +1,6 @@
-.clay-container {
-  display: inline;
-  $steps: 50;
-  .clay-title {
+$steps: 50;
+  .clay {
+
     outline: none;
     text-align: center;
     margin: 0;
@@ -30,4 +29,3 @@
       }
     }
   }
-}

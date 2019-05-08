@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactGA from 'react-ga';
 import "react-image-lightbox/style.css";
 import Card from "./card";
 import "./trophies.scss";
@@ -11,6 +12,7 @@ import blockchainTeam18_2 from "./img/imaguru_blockchain_18/team2.jpg";
 import ictAwardMe17 from "./img/ict_startup_award_17/me.jpeg";
 
 const Trophies = () => {
+  ReactGA.pageview('/trophies');
   const cards = [
     {
       title: "Imaguru FinTech Hackathon: Elevator Lab Edition",

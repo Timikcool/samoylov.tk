@@ -1,8 +1,10 @@
 import React from "react";
+import ReactGA from 'react-ga';
 import { connect } from "redux-bundler-react";
 import { getNavHelper } from "internal-nav-helper";
 import "./app.scss";
 const App = ({ route, pathname, doUpdateUrl }) => {
+  ReactGA.initialize('UA-139253577-1');
   const headerNavItems = [
     { url: "/", label: <i className="icon ion-md-home" /> },
     { url: "/crypto", label: <i className="icon ion-md-pizza" /> },
