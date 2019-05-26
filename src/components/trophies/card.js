@@ -16,7 +16,7 @@ const customStyles = {
   }
 };
 
-const Card = ({ title, status, description, date, link, images, photos }) => {
+const Card = ({ title, status, description, date, link, images, photos, github }) => {
   const [modalIsOpen, changeModal] = useState(false);
   const [lightboxIsOpen, changeLightbox] = useState(false);
   const [photoIndex, changePhotoIndex] = useState(0);
@@ -59,6 +59,9 @@ const Card = ({ title, status, description, date, link, images, photos }) => {
           <button onClick={() => changeLightbox(true)} className="gallery-btn">
             <i className="icon ion-md-images" />
           </button>
+          {github && (            <a rel="noopener noreferrer" target="_blank" href={github}>
+              <i className="icon ion-logo-github" />
+            </a>)}
         </div>
 
         <button className="cancel-btn" onClick={() => changeModal(false)}>

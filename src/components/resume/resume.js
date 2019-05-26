@@ -91,9 +91,9 @@ const Resume = () => {
       <section className="tech">
         <h3>Well known tech:</h3>
         <ul>
-          <li>Frontend: React, Inferno, Angular, Webpack, Redux, Sass</li>
+          <li>Frontend: React, Next.js, Angular, Webpack, Redux, Sass</li>
           <li>Backend: Node, Koa, Express</li>
-          <li>Tools: Docker, Git, AWS, Firebase, Heroku, now</li>
+          <li>Tools: Docker, Git, AWS, Firebase, Heroku, zeit (now)</li>
           <li>Database: MongoDB</li>
           <li>Blockchain: EOSJS, Truffle, Web3, Solidity</li>
         </ul>
