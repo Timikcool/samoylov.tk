@@ -1,6 +1,7 @@
 .trophies {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 760px) {
     flex-direction: row;

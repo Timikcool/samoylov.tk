@@ -31,6 +31,10 @@
     top: 2%;
     right: 2%;
 
+    &:focus {
+      outline: none;
+    }
+
     &:hover {
       cursor: pointer;
     }
@@ -47,6 +51,11 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  .tech {
+    font-style: italic;
+    font-size: .8em;
   }
 
   .links {

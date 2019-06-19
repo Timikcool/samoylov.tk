@@ -16,7 +16,7 @@ const customStyles = {
   }
 };
 
-const Card = ({ title, status, description, date, link, images, photos, github }) => {
+const Card = ({ title, status, description, date, link, images, tech, github }) => {
   const [modalIsOpen, changeModal] = useState(false);
   const [lightboxIsOpen, changeLightbox] = useState(false);
   const [photoIndex, changePhotoIndex] = useState(0);
@@ -36,6 +36,7 @@ const Card = ({ title, status, description, date, link, images, photos, github }
         <h2>{title}</h2>
         <h4>{status}</h4>
         <p>{description}</p>
+        <p className="tech">{tech}</p>
         {lightboxIsOpen && (
           <Lightbox
             mainSrc={images[photoIndex]}
@@ -65,7 +66,7 @@ const Card = ({ title, status, description, date, link, images, photos, github }
         </div>
 
         <button className="cancel-btn" onClick={() => changeModal(false)}>
-          X
+        <i className="icon ion-md-close"></i>
         </button>
       </Modal>
     </React.Fragment>
