@@ -5,7 +5,7 @@ import { connect } from "redux-bundler-react";
 import { getNavHelper } from "internal-nav-helper";
 import * as THREE from "three";
 import "./home.scss";
-import { toolsArr, activitiesArr } from "../utils";
+import { toolsArr } from "../utils";
 const Home = ({ doUpdateUrl }) => {
   ReactGA.pageview('/home');
   useEffect(() => {
@@ -54,7 +54,7 @@ const Home = ({ doUpdateUrl }) => {
       <div className="main-text">
         <div>
           <p>
-            Hi! You can call me Tim. I'm fullstack JS developer with{" "}
+            Hi! You can call me Tim. I'm front-end developer with{" "}
             <span className="blockchain color-switch">blockchain</span>{" "}
             experience
           </p>
@@ -71,7 +71,7 @@ const Home = ({ doUpdateUrl }) => {
             <Typed strings={toolsArr} typeSpeed={40} backSpeed={50} loop />
           </p>
           <p>
-            Worked as fullstack developer on fintech apps, social networks,
+            Worked on fintech apps, social networks,
             PWAs, games, Electron apps.
           </p>
         </div>

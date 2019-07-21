@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactGA from 'react-ga';
 import 'react-image-lightbox/style.css';
 import Card from './card';

@@ -34,6 +34,7 @@ const App = ({ route, pathname, doUpdateUrl }) => {
     }
   ];
   const Page = route;
+  console.log("👹 HAPPY HACKING! 👹");
   return (
     <main onClick={getNavHelper(doUpdateUrl)}>
       <header>

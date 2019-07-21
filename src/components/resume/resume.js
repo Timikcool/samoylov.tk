@@ -1,20 +1,20 @@
 import React from "react";
 import ReactGA from 'react-ga';
-import moment from "moment";
 import ExperienceItem from "./experienceItem";
 import experienceHistory from "./experienceHistory.json";
 import print from './toPDF';
 import "./resume.scss";
+import avatar from "./avatar.png";
 const Resume = () => {
   ReactGA.pageview('/resume');
-  const birthDay = moment("1998-12-09");
-  const years = moment().diff(birthDay, "years");
+  // const birthDay = moment("1998-12-09");
+  // const years = moment().diff(birthDay, "years");
   return (
     <div className="resume">
       <div className="header">
         <img
           className="avatar"
-          src="https://scontent-frx5-1.cdninstagram.com/vp/e96922d183dc969fe707554a43b350b1/5D2C0A1A/t51.2885-15/e35/s320x320/35001474_450156075484119_7206024527829008384_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com"
+          src={avatar}
           alt="avatar"
         />
         <div className="name">
@@ -93,7 +93,7 @@ const Resume = () => {
         <ul>
           <li>Frontend: React, Next.js, Angular, Webpack, Redux, Sass</li>
           <li>Backend: Node, Koa, Express</li>
-          <li>Tools: Docker, Git, AWS, Firebase, Heroku, zeit (now)</li>
+          <li>Tools: Git, Firebase, Heroku, zeit (now)</li>
           <li>Database: MongoDB</li>
           <li>Blockchain: EOSJS, Truffle, Web3, Solidity</li>
         </ul>

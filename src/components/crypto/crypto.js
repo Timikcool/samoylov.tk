@@ -60,9 +60,9 @@ const Crypto = ({ rawCrypto, displayCrypto }) => {
       )}
       <div className="pet-projects">
             <h4>Few of my pet-projects <span>(not only in crypto)</span> that under deveopment or mantaince</h4>
-            <ul class="pet-list">
-            {pets.map((props) => <li class="pet-item">
-                    <Pet {...props} />
+            <ul className="pet-list">
+            {pets.map((props) => <li className="pet-item" key={props.title}>
+                    <Pet {...props}  />
                 </li>)}
             </ul>
       </div>

@@ -17,14 +17,6 @@
     "description": "Trybe is a platform that collects the best articles on huge variety of themes, such as IT, travelling, health, TV and many others. Every written post gets through moderation system and will be rewarded with TRYBE cryptocurrency if it contains interesting and useful information. The Trybe’s web application is a social network that built around these articles. So every participant can also create his own private posts, follow other users, talk with friends in a chat and being notified with any kind of updates in the network. According to roadmap, Trybe updates articles sharing system and extends it with EOS wallet and portfolio tracker"
   },
   {
-    "name": "Split Cash",
-    "link":"https://dao.casino/",
-    "tools": "React, Redux, Solidity, DAO.Casino SDK (Web3.js, Truffle.js, Docker)",
-    "status": "offline",
-    "role": "Software Engineer",
-    "description": "Split Cash is a platform based on DAO.Casino SDK for development of simple, secure and beautiful gamble games on blockchain using smart contracts based on Ethereum net. Split Cash uses a decentralized blockchain protocol for gambling that provides game developers and casinos a simple and easy way to create games and to become a casino operator. With help of Split Cash game development becomes more easy and intuitive even for developers without huge blockchain knowledge base."
-  },
-  {
     "name": "Enchilada (Maxit)",
     "link" : "http://www.scivantage.com/maxit/",
     "tools": "Angular, Node, Express",
