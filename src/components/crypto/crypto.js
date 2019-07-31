@@ -8,7 +8,6 @@ import "./crypto.scss";
 import pets from "./pet-projects.json";
 import Pet from './pet';
 const Crypto = ({ rawCrypto, displayCrypto }) => {
-  console.log(rawCrypto, displayCrypto);
   const pizzaDay = moment("2010-05-22");
   const days = moment().diff(pizzaDay, "days");
   const pizzaPrice = rawCrypto ? (10000 * rawCrypto.BTC.USD.PRICE) / 2 : null;

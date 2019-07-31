@@ -94,7 +94,6 @@ export default ({ coin }) => {
       />
     </svg>
   );
-  console.log(coin);
   const coins = { BTC, ETH, EOS };
   const Svg = coins[coin];
   return <Svg />;

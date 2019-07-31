@@ -54,7 +54,7 @@ const Home = ({ doUpdateUrl }) => {
       <div className="main-text">
         <div>
           <p>
-            Hi! You can call me Tim. I'm front-end developer with{" "}
+            Hi! You can call me Tim. I'm front-end developer with backend and {" "}
             <span className="blockchain color-switch">blockchain</span>{" "}
             experience
           </p>
@@ -78,7 +78,7 @@ const Home = ({ doUpdateUrl }) => {
         <div>
           <p>
             I have also participated as{" "}
-            <span className="color-switch">{"DApp "}</span>
+            <span className="color-switch">{"dApp "}</span>
             developer in various projects on Ethereum, EOS and other not so well
             known platforms.
           </p>
@@ -102,7 +102,7 @@ const Home = ({ doUpdateUrl }) => {
       </div> */}
         <div>
           <p>
-              I love coding and making <a className="color-switch" href={"/crypto"}>pet-projects</a> for myself, but besides that I can: launch a startup and fail, play videogames on pro level, pitch idea and speak in front of any amount of people, play guitar, whistle, watch SpaceX rocket launch or Netflix all night long, make squats with my weight...
+              I love coding and making <a className="color-switch" href={"/crypto"}>pet-projects</a> for myself, but besides that I can: launch a startup and fail, play videogames on pro level, pitch idea or just speak in front of any amount of people, play guitar, whistle, watch SpaceX rocket launch or Netflix all night long and more!
           </p>
         </div>
         <div>

@@ -1,25 +1,31 @@
 .bday-container {
   font-family: monospace;
   text-align: center;
+  .cake {
+    font-size: 50px;
+  }
 }
-  .tab {
-    border-radius: 8px;
-    margin: 10px auto;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
-    color: black;
-    background: white;
-    box-sizing: border-box;
-    padding: 10px;
-    min-width: 200px;
-    min-height: 100px;
-    max-width: 425px;
-    max-height: 200px;
-    // transition: color, background 0.16s linear;
+.tab {
+  border-radius: 8px;
+  margin: 10px auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  color: black;
+  background: white;
+  box-sizing: border-box;
+  padding: 10px;
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 425px;
+  max-height: 200px;
+  // transition: color, background 0.16s linear;
 
-    &:hover {
-      background: black;
+  &:hover {
+    background: black;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+    a {
       color: white;
-      box-shadow: none;
-      cursor: pointer;
     }
   }
+}
