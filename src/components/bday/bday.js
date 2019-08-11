@@ -54,7 +54,7 @@ const BDay = ({ doUpdateUrl }) => {
         </div>
         <div className="tab">
           <h4>Отказы не принимаются</h4>
-          <a href="#">telegram чат участников</a>
+          <a href="https://t.me/joinchat/Ex3DMhEXgqQMer1b-tFsrQ">telegram чат участников</a>
         </div>
         <div className="tab">
           <h4>Подарки принимаются (но не обязательнo)</h4>
