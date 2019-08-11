@@ -3,7 +3,7 @@ import './bday.scss';
 import users from './users.json';
 import { connect } from 'redux-bundler-react';
 const location = 'Минск, Мирная улица, 9';
-const date = '14.09.1998';
+const date = '14.09.2019';
 const getThere = 'На общ. транспорте - от ст. м. Могилевская 12 минут';
 const BDay = ({ doUpdateUrl }) => {
   const userId = new URLSearchParams(window.location.search).get('user');
