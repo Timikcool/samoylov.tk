@@ -29,6 +29,7 @@ const BDay = ({ doUpdateUrl }) => {
           Твоя ссылка что бы не потерять ничего:{' '}
           <a href={window.location.href}>{window.location.href}</a>
         </p>
+        <h2>ОБЯЗАТЕЛЬНО <br /> напиши в лс идёшь ты или нет</h2>
       </div>
 
       <div className="info">
