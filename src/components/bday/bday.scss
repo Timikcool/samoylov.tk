@@ -16,16 +16,32 @@
   min-width: 200px;
   min-height: 100px;
   max-width: 425px;
-  max-height: 200px;
+  display: flex;
+  flex-direction: column;
   // transition: color, background 0.16s linear;
 
-  &:hover {
-    background: black;
-    color: white;
-    box-shadow: none;
-    cursor: pointer;
-    a {
-      color: white;
-    }
+  // &:hover {
+  //   background: black;
+  //   color: white;
+  //   box-shadow: none;
+  //   cursor: pointer;
+  //   a {
+  //     color: white;
+  //   }
+  // }
+}
+.get-there {
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  .title {
+    font-weight: 600;
+  }
+  .description {
+    font-size: 0.7rem;
+    opacity: .7;
   }
 }
