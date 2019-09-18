@@ -16,11 +16,21 @@ const customStyles = {
   }
 };
 
-const Card = ({ title, status, description, date, link, images, tech, github }) => {
+const Card = ({
+  title,
+  status,
+  description,
+  date,
+  link,
+  images,
+  tech,
+  github
+}) => {
   const [modalIsOpen, changeModal] = useState(false);
   const [lightboxIsOpen, changeLightbox] = useState(false);
   const [photoIndex, changePhotoIndex] = useState(0);
   Modal.setAppElement("#root");
+
   return (
     <React.Fragment>
       <div onClick={() => changeModal(true)} className="trophey-card">
@@ -60,13 +70,15 @@ const Card = ({ title, status, description, date, link, images, tech, github }) 
           <button onClick={() => changeLightbox(true)} className="gallery-btn">
             <i className="icon ion-md-images" />
           </button>
-          {github && (            <a rel="noopener noreferrer" target="_blank" href={github}>
+          {github && (
+            <a rel="noopener noreferrer" target="_blank" href={github}>
               <i className="icon ion-logo-github" />
-            </a>)}
+            </a>
+          )}
         </div>
 
         <button className="cancel-btn" onClick={() => changeModal(false)}>
-        <i className="icon ion-md-close"></i>
+          <i className="icon ion-md-close"></i>
         </button>
       </Modal>
     </React.Fragment>
