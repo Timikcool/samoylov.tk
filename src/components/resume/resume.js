@@ -101,7 +101,7 @@ const Resume = () => {
       <section className="experience">
         <h3>Experience:</h3>
         {experienceHistory.map(params => (
-          <ExperienceItem {...params} />
+          <ExperienceItem {...params} key={params.name} />
         ))}
       </section>
     </div>
