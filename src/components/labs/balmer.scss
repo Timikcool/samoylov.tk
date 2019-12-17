@@ -1,0 +1,32 @@
+.balmer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .gender {
+    button {
+      border: 2px solid white;
+      background: none;
+      color: white;
+      padding: 1rem;
+
+      &.active {
+        color: black;
+        background: white;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      padding: 0.5rem 0;
+    }
+  }
+}

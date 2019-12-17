@@ -1,0 +1,130 @@
+.labs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  --f-size: 1;
+  --f-unit: 0.7vmin;
+  --f: calc(var(--f-size) * var(--f-unit));
+  --bg: black;
+  color: white;
+
+  .content {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  #qube {
+    position: absolute;
+    z-index: -1;
+    height: calc(100vh - 40px - 35px);
+  }
+
+  .nav-item {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav-item.active {
+    background: white;
+    color: black;
+  }
+
+  .side-navigator {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    padding: 2rem;
+    font-family: 'Verdana';
+  }
+
+  .coins {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%;
+
+    svg {
+      fill: white;
+      height: 2em;
+      width: 2em;
+
+      & path {
+        fill: white;
+      }
+
+      & polygon {
+        fill: white;
+      }
+    }
+  }
+
+  h2 {
+    font-family: 'Press Start 2P';
+  }
+
+  .pizza-text {
+    width: 95%;
+  }
+
+  .pizza-price,
+  .pizza-count {
+    text-align: center;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.pet-projects {
+  h4 {
+    span {
+      font-weight: 300;
+    }
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  .pet-item {
+    a {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 10px 0;
+      margin: 15px auto;
+      font-weight: 600;
+      max-width: 50%;
+      border: 2px solid transparent;
+      border-color: white;
+      background: transparent;
+      color: white;
+      &:hover {
+        background: white;
+        color: black;
+      }
+      @media screen and (max-width: 768px) {
+        & {
+          max-width: 75%;
+        }
+      }
+    }
+  }
+}
+
+.encrypt {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import Typed from "react-typed";
-import { connect } from "redux-bundler-react";
-import { getNavHelper } from "internal-nav-helper";
-import * as THREE from "three";
-import "./home.scss";
-import toolsArr from "./tools.json";
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import Typed from 'react-typed';
+import { connect } from 'redux-bundler-react';
+import { getNavHelper } from 'internal-nav-helper';
+import * as THREE from 'three';
+import './home.scss';
+import toolsArr from './tools.json';
 
 const shuffleArray = arr => {
   let array = [...arr];
@@ -17,7 +17,7 @@ const shuffleArray = arr => {
 };
 
 const Home = ({ doUpdateUrl }) => {
-  ReactGA.pageview("/home");
+  ReactGA.pageview('/home');
 
   useEffect(() => {
     //scene
@@ -33,7 +33,7 @@ const Home = ({ doUpdateUrl }) => {
     // renderer
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight - 35 - 40);
-    const target = document.querySelector("#qube");
+    const target = document.querySelector('#qube');
     target && target.appendChild(renderer.domElement);
 
     // cube
@@ -68,8 +68,8 @@ const Home = ({ doUpdateUrl }) => {
       <div className="main-text">
         <div>
           <p>
-            Hi! You can call me Tim. I'm front-end developer with backend and{" "}
-            <span className="blockchain color-switch">blockchain</span>{" "}
+            Hi! You can call me Tim. I'm front-end developer with backend and{' '}
+            <span className="blockchain color-switch">blockchain</span>{' '}
             experience
           </p>
           <div className="color-switch">
@@ -81,7 +81,7 @@ const Home = ({ doUpdateUrl }) => {
         </div>
         <div>
           <p>
-            {"Anyway, I do know something about "}
+            {'Anyway, I do know something about '}
             <Typed
               strings={shuffleArray(toolsArr)}
               typeSpeed={40}
@@ -95,15 +95,15 @@ const Home = ({ doUpdateUrl }) => {
         </div>
         <div>
           <p>
-            I have also participated as{" "}
-            <span className="color-switch">{"dApp "}</span>
+            I have also participated as{' '}
+            <span className="color-switch">{'dApp '}</span>
             developer in various projects on Ethereum, EOS and other not so well
             known platforms.
           </p>
           <p onClick={getNavHelper(doUpdateUrl)}>
             Won a couple blockchain and fintech hackathons. More info about it
-            at{" "}
-            <a className="color-switch" href={"/trophies"}>
+            at{' '}
+            <a className="color-switch" href={'/trophies'}>
               trophy room
             </a>
           </p>
@@ -120,10 +120,10 @@ const Home = ({ doUpdateUrl }) => {
       </div> */}
         <div>
           <p>
-            I love coding and making{" "}
-            <a className="color-switch" href={"/crypto"}>
+            I love coding and making{' '}
+            <a className="color-switch" href={'/crypto'}>
               pet-projects
-            </a>{" "}
+            </a>{' '}
             for myself, but besides that I can: launch a startup and fail, play
             videogames on pro level, pitch idea or just speak in front of any
             amount of people, play guitar, whistle, watch SpaceX rocket launch
@@ -144,9 +144,4 @@ const Home = ({ doUpdateUrl }) => {
   );
 };
 
-export default connect(
-  "selectRoute",
-  "selectPathname",
-  "doUpdateUrl",
-  Home
-);
+export default connect('selectRoute', 'selectPathname', 'doUpdateUrl', Home);
