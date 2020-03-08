@@ -12,7 +12,8 @@ const customStyles = {
     margin: "0 auto",
     width: "80vw",
     height: "fit-content",
-    transform: "translate(-50%, -50%)"
+    transform: "translate(-50%, -50%)",
+    borderRadius: "8px"
   }
 };
 
