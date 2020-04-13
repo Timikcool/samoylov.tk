@@ -1,1 +1,7 @@
-[{ "title": "Eth 4 Top", "link": "https://eth4top.now.sh/" }]
+[
+  { "title": "Eth 4 Top", "link": "https://eth4top.now.sh/" },
+  {
+    "title": "GitLab Contributions Chart Generator",
+    "link": "https://gitlab-contributions-chart.now.sh/"
+  }
+]
