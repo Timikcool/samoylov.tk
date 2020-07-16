@@ -9,7 +9,7 @@
     "html2canvas": "^1.0.0-rc.1",
     "internal-nav-helper": "^3.0.0",
     "jspdf": "^1.5.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "node-sass": "^4.11.0",
     "pdfcrowd": "^4.8.0",
