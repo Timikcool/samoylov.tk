@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.6.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "file-saver": "^2.0.2",
     "html2canvas": "^1.0.0-rc.1",
     "internal-nav-helper": "^3.0.0",
