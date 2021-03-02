@@ -1,7 +1,6 @@
 .trophey-card {
   border-radius: 8px;
   margin: 10px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
   color: black;
   background: white;
   box-sizing: border-box;
@@ -10,10 +9,13 @@
   min-height: 100px;
   max-width: 425px;
   max-height: 200px;
+  box-shadow: rgb(190, 203, 216) 11px 11px 22px 0px,
+    rgb(243, 249, 255) -11px -11px 22px 0px;
   transition: box-shadow 0.16s linear;
 
   &:hover {
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: #becbd8 6px 6px 22px 0px, #f3f9ff -6px -6px 22px 0px;
+
     cursor: pointer;
   }
 }

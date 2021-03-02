@@ -11,7 +11,7 @@
     "jspdf": "^1.5.3",
     "lodash": "^4.17.19",
     "moment": "^2.24.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.1",
     "pdfcrowd": "^4.8.0",
     "react": "^16.8.5",
     "react-animated-slider": "^1.1.4",
